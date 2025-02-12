@@ -6,21 +6,40 @@
   <meta name="keywords" content="Login">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Login</title>
+  <title>Login - IP CAPTURE</title>
 </head>
 <body>
-  <main class="main-container">
-    <section class="header-section">
-      <div class="title-box">
-        <h1>Login</h1>
+  <main class="login-container">
+    <div class="login-card">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" class="globe-icon">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#4361EE"/>
+        </svg>
       </div>
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Enter your credentials to access your account</p>
       <form method="post" class="login-form">
-        <input type="text" placeholder="Username" required class="input-field username-field">
-        <input type="password" placeholder="Password" required class="input-field password-field">
-        <button type="submit" class="submit-btn">Login</button>
+        <div class="input-group">
+          <svg class="input-icon user-icon" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+          </svg>
+          <input type="text" placeholder="Username" required class="input-field username-field">
+        </div>
+        <div class="input-group">
+          <svg class="input-icon lock-icon" viewBox="0 0 24 24">
+            <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" fill="currentColor"/>
+          </svg>
+          <input type="password" placeholder="Password" required class="input-field password-field">
+        </div>
+        <button type="submit" class="login-button">
+          Login
+          <svg class="arrow-icon" viewBox="0 0 24 24">
+            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/>
+          </svg>
+        </button>
       </form>
-      <p>Don't have an account? <a href="signup.html">Signup here</a></p>
-    </section>
+      <p class="signup-text">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
   </main>
   <script type="module" src="login.js"></script>
 </body>
