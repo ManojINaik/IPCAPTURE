@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
-/* Base Styles */
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary: #4361EE;
   --primary-dark: #3651D4;
@@ -21,21 +27,160 @@
   --dark-gray: hsl(0, 0%, 59%);
 }
 
-* {
+body {
+  font-family: 'Rubik', sans-serif;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  min-height: 100vh;
   background: var(--background);
   color: var(--text-primary);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Login/Signup Container */
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  padding: 20px;
+}
+
+/* Card Styles */
+.login-card {
+  background: var(--white);
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.globe-icon {
+  width: 64px;
+  height: 64px;
+}
+
+/* Text Styles */
+.login-card h1 {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.login-card .subtitle {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+/* Form Styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--gray-400);
+  pointer-events: none;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 12px 12px 44px;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  background: var(--white);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+/* Button Styles */
+.login-button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.login-button:hover {
+  background: var(--primary-dark);
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--white);
+}
+
+/* Link Styles */
+.signup-text {
+  text-align: center;
+  margin-top: 24px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.signup-text a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Main App Styles */
 .app-wrapper {
   min-height: 100vh;
   display: flex;
